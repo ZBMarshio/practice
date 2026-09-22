@@ -1,5 +1,10 @@
 #include <iostream>
 
+bool is_valid_sample(int sample)
+{
+    return sample >= 0 && sample <= 100;
+}
+
 int main()
 {
     int sample = 0;
@@ -10,7 +15,7 @@ int main()
 
     while (std::cin >> sample)
     {
-        if (sample < 0 || sample > 100)
+        if (!is_valid_sample(sample))
         {
             continue;
         }
